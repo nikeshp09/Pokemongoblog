@@ -1,0 +1,18 @@
+<hr>
+<div class="post">
+	<div class="post-heading">
+		<div class="post-title">
+			{{p.subject}}
+		</div>
+
+		<div class="post-date">
+			
+			{{p.created.strftime("%b, %d, %Y")}} by: {{p.author}} | Total likes <a class="entypo-thumbs-up"></a><span class="badge">{{p.likes}}</span> | Total dislikes <a class="entypo-thumbs-down"></a><span class="badge">{{p.dislikes}}</span>
+		</div>
+		
+	</div>
+
+	<div class="post-content">
+		{{p._render_text | safe}}
+	</div>
+</div>

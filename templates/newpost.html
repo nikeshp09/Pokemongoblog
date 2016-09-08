@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h2>New Post</h2>
+
+		<form method="post">
+			<label>
+				<div>Subject</div>
+				<input class="form-control" id="exampleInputPassword1" placeholder="Pokemon? Where? Rare? Tell Us!" type="text" name="subject" value="{{subject}}">
+			</label>
+
+			<label>
+				<div>Content</div>
+				<textarea name="content" class="form-control" id="exampleInputEmail1" placeholder="Please tell us your Pokemon hunting adventures and tips! Images will be able to be added soon!">{{content}}</textarea>
+			</label>
+			<input type="hidden" name="author" value="{{user.name}}">
+
+			<div class="error">{{error}}</div>
+
+			<button type="submit" type="button" class="entypo-publish btn btn-primary btn-lg btn-block"> Publish</button>
+			<a class="btn btn-danger btn-xs btn-block" role="button" href="/blog">Cancel</a>
+		</form>
+{% endblock %}

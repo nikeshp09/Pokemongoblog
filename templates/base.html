@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	
+	<link rel="stylesheet" href="/static/bootstrap.css">
+    <link rel="stylesheet" href="/static/bootstrap-theme.css">
+	<link type="text/css" rel="stylesheet" href="/static/main.css"/>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Go Trainer's Blog</title>
+</head>
+
+<body>
+	<div class="pagetitle">
+  <h1 class="entypo-qq"> Pokemon Go Trainer's Blog</h1>
+  <p class="entypo-traffic-cone"> Play safe and be aware of your surroundings!</p>
+  <p>
+	<ul class="nav nav-tabs nav-justified">
+ 		<li role="presentation" class="active"><a href="/blog">Home</a></li>
+  		<li role="presentation"><a href="">Profile</a></li>
+  		<li role="presentation"><a href="">Tips & Tricks</a></li>
+  		<li role="presentation"><a href="">Likes</a></li>
+
+ 	</ul>
+	</p>
+	</div>
+
+	<div class="login-area">
+		{% if user %}
+			{{user.name}} | <a class="entypo-logout" href="/logout"> logout</a>
+		{% else %}
+			<a class="entypo-login" href="/login"> Login</a>
+			|
+			<a class="entypo-user-add" href="/signup"> Sign Up</a>
+		{% endif %}
+	</div>
+	
+	<div id="content">	
+		{% block content %}
+		{% endblock %}
+	</div> 
+	<footer>
+		<hr>
+		<address>
+	  	<strong>NJP LLC</strong><br>
+	  		9107 Cliff lake ln<br>
+	  		Tampa, FL 33614<br>
+			<abbr title="Phone">P:</abbr> (813) 679-6367
+		</address>
+		<address>
+  			<strong>Created by: Nikesh J Patel</strong><br>
+  			<a href="mailto:#">NikePatel09@gmail.com</a>
+		</address>
+	</footer>
+</body> 
+</html>

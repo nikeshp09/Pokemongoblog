@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+	{{post.render() | safe}}
+<br>
+<a class="typicons-edit" href="/blog/editpost?post={{post.key().id()}}"> Edit</a> <br>		
+<a class="fontawesome-trash" href="/blog/delete?post={{post.key().id()}}"> Delete</a> <br>
+<a href="/blog">Back to the Blog.</a>
+{% endblock %}

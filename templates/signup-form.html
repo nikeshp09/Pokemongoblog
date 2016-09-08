@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<body>
+		<h2 class="pagetitle">Signup and Blog about Pokemon!</h2>
+		<form method="post">
+			
+				<div class="form-group">
+					<label for="exampleInputEmail1">Username</label>
+					<input type="text" name="username" value="{{username}}" class="form-control" id="exampleInputEmail1" placeholder="Username">	
+					<td id="inputError1" class="error">
+						{{error_username}}
+					</td>
+				</div>
+				<div class="form-group">
+ 			   		<label for="exampleInputPassword1">Password</label>
+					<input type="password" name="password" value="" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					<td id="inputError1" class="error">
+						{{error_password}}
+					</td>
+				</div>
+				<div class="form-group">
+ 			   		<label for="exampleInputPassword1">Verify Password</label>
+					<input type="password" name="verify" value="{{password}}" class="form-control" id="exampleInputPassword1" placeholder="Verify">
+					<td id="inputError1" class="error">
+						{{error_verify}}
+					</td>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Email</label>
+					<input type="text" name="username" value="{{email}}" class="form-control" id="exampleInputEmail1" placeholder="Optional">	
+					<td id="inputError1" class="error">
+						{{error_username}}
+					</td>
+				</div>
+			<div class="signups">	
+			<button type="submit" class="btn btn-success btn-lg entypo-user-add"> Sign Up!</button>	
+			<a class="btn btn-info btn-lg entypo-users " role="button" href="/login"> Trainer Login</a>
+			</div>
+		</form>
+	</body>
+
+{% endblock %}

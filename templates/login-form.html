@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<body>
+		<h2 class="pagetitle">Pokemon Trainer Login</h2>
+		<form method="post">
+			<div class="form-group">
+				<label for="exampleInputEmail1">Username</label>
+				<input type="text" name="username" value="{{username}}" class="form-control" id="exampleInputEmail1" placeholder="Username">	
+			</div>	
+			<div class="form-group">
+		   		<label for="exampleInputPassword1">Password</label>
+				<input type="password" name="password" value="" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			</div>
+			<div class="error">
+				{{error}}
+			</div>
+			<div class="submit">
+			<button type="submit" class="btn btn-primary btn-lg entypo-login"> Login</button>
+			<a class="btn btn-success btn-lg entypo-user-add" role="button" href="/signup"> Sign Up!</a>
+			</div>
+		</form>
+	</body>
+
+{% endblock %}
